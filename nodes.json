@@ -1,0 +1,74 @@
+
+{
+  "nodes": {
+    "theforeman.example.com": {
+      ":ip": "192.168.35.5",
+      "ports": [
+        {
+          ":host": 8443,
+          ":guest": 443,
+          ":id": "port-1"
+        },
+        {
+          ":host": 5080,
+          ":guest": 80,
+          ":id": "port-2"
+        },
+        {
+          ":host": 5081,
+          ":guest": 8080,
+          ":id": "port-3"
+        }
+      ],
+      ":memory": 1024,
+      ":box": "puppetlabs/centos-7.0-64-puppet",
+      ":bootstrap": "bootstrap-foreman.sh"
+    },
+    "agent01.example.com": {
+      ":ip": "192.168.35.10",
+      "ports": [
+        {
+          ":host": 8444,
+          ":guest": 443,
+          ":id": "port-1"
+        },
+        {
+          ":host": 5082,
+          ":guest": 80,
+          ":id": "port-2"
+        },
+        {
+          ":host": 5083,
+          ":guest": 8080,
+          ":id": "port-3"
+        }
+      ],
+      ":memory": 1024,
+      ":box": "puppetlabs/centos-7.0-64-puppet",
+      ":bootstrap": "bootstrap-node-rhel.sh"
+    },
+    "agent02.example.com": {
+      ":ip": "192.168.35.20",
+      "ports": [
+        {
+          ":host": 8445,
+          ":guest": 443,
+          ":id": "port-1"
+        },
+        {
+          ":host": 5084,
+          ":guest": 80,
+          ":id": "port-2"
+        },
+        {
+          ":host": 5085,
+          ":guest": 8080,
+          ":id": "port-3"
+        }
+      ],
+      ":memory": 1024,
+      ":box": "puppetlabs/centos-7.0-64-puppet",
+      ":bootstrap": "bootstrap-node-rhel.sh"
+    }
+  }
+}
